@@ -29,8 +29,7 @@ public final class MfaDtos {
     public record TotpRegisterRequest(
             String secret,
             String code,
-            String deviceName,
-            boolean overwrite) {
+            String deviceName) {
     }
 
     public record TotpRegisterResponse(

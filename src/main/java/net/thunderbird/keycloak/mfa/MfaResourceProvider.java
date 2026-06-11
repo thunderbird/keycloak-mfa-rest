@@ -5,24 +5,22 @@
  */
 package net.thunderbird.keycloak.mfa;
 
-import java.util.Set;
-
 import org.keycloak.models.KeycloakSession;
 import org.keycloak.services.resource.RealmResourceProvider;
 
 public class MfaResourceProvider implements RealmResourceProvider {
 
     private final KeycloakSession session;
-    private final Set<String> authorizedClients;
+    private final MfaConfig config;
 
-    public MfaResourceProvider(KeycloakSession session, Set<String> authorizedClients) {
+    public MfaResourceProvider(KeycloakSession session, MfaConfig config) {
         this.session = session;
-        this.authorizedClients = authorizedClients;
+        this.config = config;
     }
 
     @Override
     public Object getResource() {
-        return new MfaResource(session, authorizedClients);
+        return new MfaResource(session, config);
     }
 
     @Override
