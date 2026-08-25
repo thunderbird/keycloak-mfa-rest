@@ -6,7 +6,7 @@
 
     <groupId>net.thunderbird.keycloak</groupId>
     <artifactId>keycloak-mfa-rest</artifactId>
-    <version>0.1.0</version>
+    <version>0.1.1</version>
     <packaging>jar</packaging>
 
     <name>Thunderbird Keycloak MFA REST</name>
@@ -18,7 +18,7 @@
 
     <properties>
         <!-- Keep aligned with the Keycloak image tag in thunderbird-accounts/Dockerfile.keycloak -->
-        <keycloak.version>26.5.0</keycloak.version>
+        <keycloak.version>26.7.2</keycloak.version>
         <maven.compiler.release>17</maven.compiler.release>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
